@@ -1,0 +1,131 @@
+
+
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+ 
+  <title> Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ 
+
+
+    <title>Table insertRow() method in HTML</title> 
+    <style> 
+        table, 
+        td { 
+            border: 1px solid green; 
+        } 
+          
+        h1 { 
+            color: green; 
+        } 
+        
+        h2 { 
+            color: green; 
+        } 
+          
+        h3 { 
+            font-family: Impact; 
+        } 
+          
+        body { 
+            text-align: center; 
+        } 
+    </style> 
+</head> 
+  
+<body> 
+  <div class="container">
+  
+    <h1>Contractor details</h1> 
+    <h3>Please update your individual contractor details for now along with address</h3> 
+    <h4> This will be a single point location and also, this will help to stay united when facing govt </h4>
+    <p>To add a new row at the end of the table, click the "Add Row" button.</p> 
+  
+  
+	  
+
+  <h2>Details in the Table</h2>
+  <p>In the future we will capture the phone number and communicate via sms </p>            
+  <table class="table table-bordered"  id="myTable" >
+    <thead style="text-align: center; " >
+      <tr  >
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+         <th>Phone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+        <td>9845499999</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+        <td>9845499999</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+        <td>9845499999</td>
+          
+      </tr>
+       
+      
+    </tbody>
+  </table>
+</div>
+
+
+   
+    <br> 
+  
+    <button onclick="row1()"> 
+      Add Row 
+    </button> 
+  
+  
+  
+    <script> 
+    
+    	function row1()
+    	{
+    			var tableRef = document.getElementById('myTable').getElementsByTagName('tbody')[0];
+
+ 				// Insert a row in the table at row index 0
+			    var newRow   = tableRef.insertRow(tableRef.rows.length);
+
+  			   // Insert a cell in the row at index 0
+ 			   var newCell0  = newRow.insertCell(0);
+ 			   newCell0.innerHTML = "James"; 
+ 			   
+ 			   var newCell1  = newRow.insertCell(1);
+ 			   newCell1.innerHTML = "Bond"; 
+ 			   
+ 			   var newCell2  = newRow.insertCell(2);
+ 			   newCell2.innerHTML = "james.bond@uk.com"; 
+ 			   
+ 			    var newCell3  = newRow.insertCell(3);
+ 			   newCell3.innerHTML = "88888888"; 
+ 			   
+  
+    	}
+       
+    </script> 
+  
+</body> 
+  
+</html> 
+
+
